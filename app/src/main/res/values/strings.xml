@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">EasyRouter</string>
+    <string name="btn_text_1">跳转1</string>
+    <string name="btn_text_2">跳转2</string>
+    <string name="btn_text_3">跳转3</string>
+</resources>

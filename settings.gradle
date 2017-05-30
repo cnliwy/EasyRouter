@@ -1,0 +1,1 @@
+include ':app', ':easyrouter', ':compile', ':annotation', ':stub'
