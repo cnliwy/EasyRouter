@@ -5,9 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.liwy.easyrouter.annotation.Router;
 import com.liwy.easyrouter.router.RouterInit;
 import com.liwy.easyrouter.router.Routers;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     Button btn1;
@@ -21,12 +23,15 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Routers.open(MainActivity.this,"hello");
+                Map<String,Object> map = new HashMap<String, Object>();
+                map.put("name","Tom");
+                map.put("say","hello world");
+//                Routers.open(MainActivity.this,"hello");
+                Routers.open(MainActivity.this,"hello",map);
             }
         });
     }
 
-    @Router("testRouterForJoke")
     public void testRouter(){
         System.out.println("hello world");
     }
