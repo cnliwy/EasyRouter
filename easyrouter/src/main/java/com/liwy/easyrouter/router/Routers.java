@@ -46,4 +46,16 @@ public class Routers {
             return;
         }
     }
+    public static void open(Context context, String name, Bundle bundle){
+        if (maps.containsKey(name)){
+            Intent intent = new Intent(context,maps.get(name));
+            if (bundle != null){
+                intent.putExtras(bundle);
+            }
+            context.startActivity(intent);
+        }else{
+            System.out.println("404,activity not found");
+            return;
+        }
+    }
 }
